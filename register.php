@@ -1,3 +1,11 @@
+<?php
+	// untuk mencegah user yang sudah login untuk ke page register
+	if($user_id){
+		header("location:".BASE_URL);
+}
+
+?>
+
 <div id="container-user-akses">
 
 	<?php
@@ -58,7 +66,7 @@
 		</div>
 
 		<div class="element-form">
-			<span><input type="submit" value="register" /></span>
+			<span><input type="submit" value="Register" /></span>
 		</div>
 
 	</form>

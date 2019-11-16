@@ -1,10 +1,20 @@
 <?
+	// untuk memulai session
+	session_start();
+
 	// memanggil file helper
 	include_once("function/helper.php");
 
 	// digunakan untuk mengecek apakah get dengan nilai page ada di url
 	$page = isset($_GET['page']) ? $_GET['page'] : false;
 
+	// jika SESSIOn ada nilainya akan ditampung di variabel
+	$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : false;
+	$nama = isset($_SESSION['nama']) ? $_SESSION['nama'] : false;
+	$level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
+
+	// untuk upperstring ke nama
+	$namaup = strtoupper($nama);
 ?>
 
 <!DOCTYPE html>
@@ -25,8 +35,17 @@
 
 
 		<div id="menu">
-			<a href="<?php echo BASE_URL."index.php?page=login"; ?>">LOGIN</a>
-			<a href="<?php echo BASE_URL."index.php?page=register"; ?>">REGISTER</a>
+			<?php
+				if($user_id){
+					echo "SELAMAT DATANG $namaup <a href='".BASE_URL."index.php?page=profilku'> MY PROFILE</a> <a href='".BASE_URL."logout.php'>LOGOUT</a>";
+				} else {
+					echo "<a href='".BASE_URL."index.php?page=login'>LOGIN</a>";
+					echo "<a href='".BASE_URL."index.php?page=register'>REGISTER</a>";
+
+				}
+
+			?>
+
 			<a class="cartt" href="<?php echo BASE_URL."index.php?page=keranjang" ?>">
 				<img src="<?php echo BASE_URL."images/cart.png" ?>">
 			</a>
