@@ -106,6 +106,49 @@ img#logo {
 	padding: 7px 20px;
 }
 
+#bg-page-profile {
+	overflow: hidden;
+}
+
+#menu-profile {
+	float: left;
+	width: 245px;
+	background: #282828;
+}
+
+#menu-profile ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+#menu-profile ul li a {
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 15px 20px;
+}
+
+.active {
+	background-color: #red;
+}
+
+#menu-profile ul li a:hover,
+#menu-profile ul li a.active {
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 15px 20px;
+	background: gray;
+}
+
+#profile-content {
+	float: left;
+	width: 835px;
+	padding: 10px;
+	background: gray;
+}
+
 /*footer*/
 #footer {
 	background-color: #282828;

@@ -2,6 +2,8 @@
 	// untuk memulai session
 	session_start();
 
+	// memanggil file koneksi
+	include_once("function/koneksi.php");
 	// memanggil file helper
 	include_once("function/helper.php");
 
@@ -20,10 +22,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Not Only Code Distro</title>	
 	<!-- memanggil file css -->
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL."css/style.css"  ?>">
-</head>
+</head> 	
 <body>
 	<div id="container">
 		<!-- HEADER -->
@@ -36,9 +40,12 @@
 
 		<div id="menu">
 			<?php
+				// cek nilai di user id
 				if($user_id){
-					echo "SELAMAT DATANG $namaup <a href='".BASE_URL."index.php?page=profilku'> MY PROFILE</a> <a href='".BASE_URL."logout.php'>LOGOUT</a>";
+					// jika ada nilai maka dapat masuk
+					echo "SELAMAT DATANG $namaup <a href='".BASE_URL."index.php?page=profilku&module=banner&action=list'> MY PROFILE</a> <a href='".BASE_URL."logout.php'>LOGOUT</a>";
 				} else {
+					// jika tidak ada nilai di user id maka akan masuk page awal
 					echo "<a href='".BASE_URL."index.php?page=login'>LOGIN</a>";
 					echo "<a href='".BASE_URL."index.php?page=register'>REGISTER</a>";
 
