@@ -96,10 +96,20 @@ img#logo {
 	padding: 7px 20px;
 }
 
-.element-form span input[type="submit"]:hover {
-	background: gray;
+.element-form span input[type="submit"] {
+	background: #282828;
 	border: none;
 	color: white;
+	font-size: 12px;
+	cursor: pointer;
+	border-radius: 3px;
+	padding: 7px 20px;
+}
+
+.element-form span input[type="submit"]:hover {
+	background: white;
+	border: none;
+	color: #282828;
 	font-size: 12px;
 	cursor: pointer;
 	border-radius: 3px;
@@ -147,6 +157,84 @@ img#logo {
 	width: 835px;
 	padding: 10px;
 	background: gray;
+}
+
+#frame-tambah {
+	margin-bottom: 10px;
+	text-align: right;
+}
+
+#frame-tambah a {
+	background: black;
+	padding: 8px 16px;
+	border-radius: 5px;
+	text-decoration: none;
+	text-align: right;
+	color: white;
+	font-weight: bold;
+}
+
+#frame-tambah a:hover {
+	background: white;
+	padding: 8px 16px;
+	border-radius: 5px;
+	text-decoration: none;
+	text-align: right;
+	color: black;
+	font-weight: bold;
+}
+
+.table-list {
+	width: 100%;
+	border-collapse: collapse;
+
+	background: #282828;
+}
+
+.baris-title {
+	background: black;
+}
+
+.kolom-nomor {
+	width: 20px;
+	text-align: center;
+}
+
+.kiri {
+	text-align: left;
+}
+
+.edit-a {
+	background: black;
+	padding: 8px 16px;
+	border-radius: 5px;
+	text-decoration: none;
+	text-align: right;
+	color: white;
+	font-weight: bold;
+}
+
+.edit-a:hover {
+	background: white;
+	padding: 8px 16px;
+	border-radius: 5px;
+	text-decoration: none;
+	text-align: right;
+	color: black;
+	font-weight: bold;
+}
+
+.tengah {
+	text-align: center;
+}
+
+.kanan {
+	text-align: right;
+}
+
+.table-list th,
+.table-list td{
+	padding: 10px 7px;
 }
 
 /*footer*/
