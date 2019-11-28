@@ -65,7 +65,7 @@
 
 	<div style="margin-bottom: 10px;">
 		<label style="margin-bottom: 10px; font-weight: bold;">Spesifikasi</label>
-		<span><textarea name="spesifikasi" id="editor"> value = "<?php echo $spesifikasi; ?>"></textarea></span>
+		<span><textarea name="spesifikasi" id="editor"> <?php echo $spesifikasi; ?></textarea></span>
 	</div>
 
 	<div class="element-form">

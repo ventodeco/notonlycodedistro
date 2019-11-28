@@ -18,7 +18,7 @@
 	if($_FILES["file"]["name"] != ""){
 		$nama_file = $_FILES["file"]["name"];
 		// simpan data foto di folder
-        move_uploaded_file($_FILES["file"]["tmp_name"], "../../images/slide/" . $nama_file);
+        move_uploaded_file($_FILES["file"]["tmp_name"], "../../images/barang/" . $nama_file);
 
 		$update_gambar = ", gambar='$nama_file' ";
 	}
