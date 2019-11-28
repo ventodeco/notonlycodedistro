@@ -237,6 +237,38 @@ img#logo {
 	padding: 10px 7px;
 }
 
+#kiri {
+	width: 245px;
+	height: auto;
+	float: left;
+}
+
+#menu-kategori ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#menu-kategori ul li {
+	margin-bottom: 5px;
+}
+
+#menu-kategori ul li a {
+	display: block;
+	padding: 10px;
+	background: #282828;
+	color: white;
+	text-decoration: none;
+}
+
+#menu-kategori ul li a:hover {
+	display: block;
+	padding: 10px;
+	background: gray;
+	color: white;
+	text-decoration: none;
+}
+
 /*footer*/
 #footer {
 	background-color: #282828;

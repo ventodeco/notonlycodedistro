@@ -69,7 +69,7 @@
 				if(file_exists($filename)){
 					include_once($filename);
 				} else {
-					echo "Maaf file tersebut tidak ada";
+					include_once("main.php");
 				}
 
 			?>

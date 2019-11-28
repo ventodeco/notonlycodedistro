@@ -25,6 +25,6 @@
 		$_SESSION['nama'] = $row['nama'];
 		$_SESSION['level'] = $row['level'];
 
-		// dikembalikan ke my profile
-		header("location:".BASE_URL."index.php?page=profilku&module=banner&action=list");
+		// dikembalikan ke my profile langsung ke module pesanan
+		header("location:".BASE_URL."index.php?page=profilku&module=pesanan&action=list");
 	}

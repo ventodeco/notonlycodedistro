@@ -30,7 +30,7 @@
 	}
 ?>
 
-// memanggil ckeditor.js
+ <!-- memanggil ckeditor.js -->
 <script src="<?php echo BASE_URL."js/ckeditor_4.13.0_basic/ckeditor/ckeditor.js" ?>" ></script>
 
 <!-- untuk membuat data baru barang atau  -->

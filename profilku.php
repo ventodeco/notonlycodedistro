@@ -15,6 +15,12 @@
 	<div id="menu-profile">	
 		<!-- kategori di module -->
 		<ul>
+
+			<?php 
+				if($level == "superadmin"){
+			?>
+
+
 			<li>
 				<a <?php if($module == "kategori"){ echo "class='active'"; } ?> href="<?php echo BASE_URL."index.php?page=profilku&module=kategori&action=list"; ?>">Kategori</a>
 			</li>
@@ -30,6 +36,11 @@
 			<li>
 				<a <?php if($module == "banner"){ echo "class='active'"; } ?> href="<?php echo BASE_URL."index.php?page=profilku&module=banner&action=list"; ?>">Banner</a>
 			</li>
+
+			<?php
+				}
+			?>
+
 			<li>
 				<a <?php if($module == "pesanan"){ echo "class='active'"; } ?> href="<?php echo BASE_URL."index.php?page=profilku&module=pesanan&action=list"; ?>">Pesanan</a>
 			</li>
