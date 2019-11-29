@@ -15,10 +15,12 @@
 	$stok = $_POST['stok'];
 	$update_gambar = "";
 
-	if($_FILES["file"]["name"] != ""){
-		$nama_file = $_FILES["file"]["name"];
+	if(!empty($_FILES['file']['name'])){
+		$nama_file = $_FILES['file']['name'];
+		$path = "../../images/barang/".$nama_file;
 		// simpan data foto di folder
-        move_uploaded_file($_FILES["file"]["tmp_name"], "../../images/barang/" . $nama_file);
+
+        move_uploaded_file($_FILES['file']['tmp_name'], $path);
 
 		$update_gambar = ", gambar='$nama_file' ";
 	}

@@ -1,20 +1,8 @@
 <!-- pilih kategori di bagian samping -->
 <div id="kiri">
-	<div id="menu-kategori">
-
-		<ul>
-			<?php
-				$query = mysqli_query($koneksi, "SELECT * FROM kategori WHERE status='on'");
-
-				while($row=mysqli_fetch_assoc($query)){
-
-					echo "<li><a href='".BASE_URL."index.php?kategori_id=$row[kategori_id]'>$row[kategori]</a></li>";
-
-				}
-			?>
-		</ul>
-
-	</div>
+	<?php
+		echo kategori($kategori_id);
+	?>
 
 </div>
 
@@ -22,12 +10,32 @@
 <!-- bagian inti menu dibagian kanan -->
 
 <div id="kanan">
+	<div id="slides">
+			
+		<?php
+
+			$queryBanner = mysqli_query($koneksi, "SELECT * FROM banner WHERE status='on' ORDER BY banner_id DESC LIMIT 3 ");
+
+			while($rowBanner=mysqli_fetch_assoc($queryBanner)){
+				echo "<a href='".BASE_URL."$rowBanner[link]'> <img src='".BASE_URL."images/slide/$rowBanner[gambar]' > </a>";
+			}
+
+		?>
+
+	</div>
+
 	<div id="frame-barang">
-		
+			
 		<ul>
 			<?php
 
-				$query = mysqli_query($koneksi, "SELECT * FROM barang WHERE status='on'");
+				if($kategori_id) {
+					$query = mysqli_query($koneksi, "SELECT * FROM barang WHERE status='on' AND kategori_id='$kategori_id' ORDER BY rand() ");
+
+				} else {
+					$query = mysqli_query($koneksi, "SELECT * FROM barang WHERE status='on' ORDER BY rand() ");
+				}
+
 
 				$no=1;
 				while($row=mysqli_fetch_assoc($query)){

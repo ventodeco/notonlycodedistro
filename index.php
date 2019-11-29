@@ -10,6 +10,8 @@
 	// digunakan untuk mengecek apakah get dengan nilai page ada di url
 	$page = isset($_GET['page']) ? $_GET['page'] : false;
 
+	$kategori_id = isset($_GET['kategori_id']) ? $_GET['kategori_id'] : false;
+
 	// jika SESSIOn ada nilainya akan ditampung di variabel
 	$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : false;
 	$nama = isset($_SESSION['nama']) ? $_SESSION['nama'] : false;
@@ -27,6 +29,26 @@
 	<title>Not Only Code Distro</title>	
 	<!-- memanggil file css -->
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL."css/style.css"  ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL."css/slide.css"  ?>">
+
+	<script src="<?php echo BASE_URL."js/jquery-3.4.1.min.js"; ?>"></script>
+	<script src="<?php echo BASE_URL."js/Slides-SlidesJS-3/source/jquery.slides.min.js"; ?>"></script>
+
+	<script>
+		$(function() {
+      		$('#slides').slidesjs({
+		        width: 940,
+		        height: 300,
+		        play: {
+		          active: true,
+		          auto: true,
+		          interval: 4000,
+		          swap: true
+		        }
+	      	});
+	   	});
+	</script>
+
 </head> 	
 <body>
 	<div id="container">
