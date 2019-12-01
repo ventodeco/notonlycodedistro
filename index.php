@@ -1,4 +1,4 @@
-<?
+<?php
 	// untuk memulai session
 	session_start();
 
@@ -12,10 +12,18 @@
 
 	$kategori_id = isset($_GET['kategori_id']) ? $_GET['kategori_id'] : false;
 
-	// jika SESSIOn ada nilainya akan ditampung di variabel
+	// jika SESSION ada nilainya akan ditampung di variabel
 	$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : false;
 	$nama = isset($_SESSION['nama']) ? $_SESSION['nama'] : false;
 	$level = isset($_SESSION['level']) ? $_SESSION['level'] : false;
+	
+	$keranjang = isset($_SESSION['keranjang']) ? $_SESSION['keranjang'] : false;
+
+	$totalBarang = count($keranjang);
+
+	// echo "<pre>";
+	// print_r($keranjang);
+	// echo "</pre>";
 
 	// untuk upperstring ke nama
 	$namaup = strtoupper($nama);
@@ -65,7 +73,7 @@
 				// cek nilai di user id
 				if($user_id){
 					// jika ada nilai maka dapat masuk
-					echo "SELAMAT DATANG $namaup <a href='".BASE_URL."index.php?page=profilku&module=banner&action=list'> MY PROFILE</a> <a href='".BASE_URL."logout.php'>LOGOUT</a>";
+					echo "SELAMAT DATANG $namaup <a href='".BASE_URL."index.php?page=profilku&module=pesanan&action=list'> MY PROFILE</a> <a href='".BASE_URL."logout.php'>LOGOUT</a>";
 				} else {
 					// jika tidak ada nilai di user id maka akan masuk page awal
 					echo "<a href='".BASE_URL."index.php?page=login'>LOGIN</a>";
@@ -77,6 +85,13 @@
 
 			<a class="cartt" href="<?php echo BASE_URL."index.php?page=keranjang" ?>">
 				<img src="<?php echo BASE_URL."images/cart.png" ?>">
+				<?php
+
+					if($totalBarang != 0){
+						echo "<span class='total-barang'>$totalBarang</span>";
+					}
+
+				?>
 			</a>
 		</div>
 
