@@ -10,6 +10,38 @@ body {
   border-bottom: 1px solid gray;
 }
 
+.tombol-action {
+  text-decoration: none;
+  color: white;
+  padding: 4px 10px;
+  background: gray;
+  border-radius: 3px;
+}
+
+.label-data-pengiriman {
+  border: 1px solid gray;
+  padding: 10px 20px;
+  margin: 0px;
+}
+
+#frame-data-pengiriman {
+  float: left;
+  width: 500px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+#frame-data-detail {
+  float: left;
+  width: 560px;
+}
+#frame-detail-order {
+  border: 1px solid gray;
+}
+#frame-form-pengiriman {
+  border: 1px solid gray;
+  padding: 15px;
+}
+
 #container {
 	width: 1100px;
 	height: auto;

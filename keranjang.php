@@ -49,7 +49,7 @@
 
 		echo "<div id='frame-button-keranjang'>
 				<a id='lanjut-belanja' href='".BASE_URL."index.php' >Lanjut Belanja</a>
-				<a id='lanjut-pemesanan' href='".BASE_URL."index.php?page=data_pemesanan' >Lanjut Pemesanan</a>
+				<a id='lanjut-pemesanan' href='".BASE_URL."index.php?page=data_pemesan' >Lanjut Pemesanan</a>
 			  </div>";
 
 
@@ -68,8 +68,8 @@
 		$.ajax({
 			method: "POST",
 			url: "update_keranjang.php",
-			data: "barang_id="+barang_id+"$value"+value
-		});
+			data: "barang_id="+barang_id+"&value="+value
+		})
 		.done(function(data){
 			location.reload();
 		});

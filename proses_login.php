@@ -25,6 +25,12 @@
 		$_SESSION['nama'] = $row['nama'];
 		$_SESSION['level'] = $row['level'];
 
-		// dikembalikan ke my profile langsung ke module pesanan
-		header("location:".BASE_URL."index.php?page=profilku&module=pesanan&action=list");
+		if(isset($_SESSION["proses_pesanan"])){
+			// kembalikan ke page data pemesanan
+			header("location:".BASE_URL."index.php?page=data_pemesanan");
+		} else {
+			// dikembalikan ke my profile langsung ke module pesanan
+			header("location:".BASE_URL."index.php?page=profilku&module=pesanan&action=list");
+		}
+
 	}
