@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.5.2
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Okt 29, 2019 at 05:30 PM
+-- Host: localhost
+-- Generation Time: Dec 05, 2019 at 07:17 
 -- Server version: 10.1.13-MariaDB
--- PHP Version: 7.0.5
+-- PHP Version: 5.6.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -34,6 +34,14 @@ CREATE TABLE `banner` (
   `status` enum('on','off') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `banner`
+--
+
+INSERT INTO `banner` (`banner_id`, `banner`, `gambar`, `link`, `status`) VALUES
+(1, 'NotOnlyCode 1', 'slider1.jpg', 'index.php', 'on'),
+(2, 'NotOnlyCode 2', 'slider2.jpg', 'index.php', 'on');
+
 -- --------------------------------------------------------
 
 --
@@ -51,6 +59,22 @@ CREATE TABLE `barang` (
   `status` enum('on','off') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `barang`
+--
+
+INSERT INTO `barang` (`barang_id`, `kategori_id`, `nama_barang`, `spesifikasi`, `gambar`, `harga`, `stok`, `status`) VALUES
+(20, 7, 'Mens Shirt 1', '<p>Bahan kaos Cotton 30s ini memiliki gramasi antara 140 &ndash; 120 gr/m2. Bahan Cotton 30s ini paling banyak diminati terutama di kalangan anak muda, sering dipakai di setiap konveksi, distro dll karena bahannya tipis, tidak panas, dan tidak menyusut. Untuk bahan Cotton 30s ini lebih mudah ditemukan karena setiap konveksi pasti menawarkan pembuatan kaosnya menggunakan bahan Cotton 30s.</p>', 'gambar7.jpg', 120000, 7, 'on'),
+(21, 7, 'Mens Shirt 2', '<p>Bahan kaos Cotton 30s ini memiliki gramasi antara 140 &ndash; 120 gr/m2. Bahan Cotton 30s ini paling banyak diminati terutama di kalangan anak muda, sering dipakai di setiap konveksi, distro dll karena bahannya tipis, tidak panas, dan tidak menyusut. Untuk bahan Cotton 30s ini lebih mudah ditemukan karena setiap konveksi pasti menawarkan pembuatan kaosnya menggunakan bahan Cotton 30s.</p>', 'gambar8.jpg', 120000, 10, 'on'),
+(22, 8, 'Mens Jacket 1', '<p>Bahan kaos Cotton 30s ini memiliki gramasi antara 140 &ndash; 120 gr/m2. Bahan Cotton 30s ini paling banyak diminati terutama di kalangan anak muda, sering dipakai di setiap konveksi, distro dll karena bahannya tipis, tidak panas, dan tidak menyusut. Untuk bahan Cotton 30s ini lebih mudah ditemukan karena setiap konveksi pasti menawarkan pembuatan kaosnya menggunakan bahan Cotton 30s.</p>', 'gambar6.jpg', 120000, 10, 'on'),
+(23, 8, 'Mens Jacket 2', '<p>Bahan kaos Cotton 30s ini memiliki gramasi antara 140 &ndash; 120 gr/m2. Bahan Cotton 30s ini paling banyak diminati terutama di kalangan anak muda, sering dipakai di setiap konveksi, distro dll karena bahannya tipis, tidak panas, dan tidak menyusut. Untuk bahan Cotton 30s ini lebih mudah ditemukan karena setiap konveksi pasti menawarkan pembuatan kaosnya menggunakan bahan Cotton 30s.</p>', 'gambar2.jpg', 150000, 10, 'on'),
+(27, 7, 'Mens Shirt 3', '<p>Bahan kaos Cotton 30s ini memiliki gramasi antara 140 &ndash; 120 gr/m2. Bahan Cotton 30s ini paling banyak diminati terutama di kalangan anak muda, sering dipakai di setiap konveksi, distro dll karena bahannya tipis, tidak panas, dan tidak menyusut. Untuk bahan Cotton 30s ini lebih mudah ditemukan karena setiap konveksi pasti menawarkan pembuatan kaosnya menggunakan bahan Cotton 30s.</p>', 'gambar9.jpg', 120000, 10, 'on'),
+(28, 7, 'Mens Shirt 4', '<p>Bahan kaos Cotton 30s ini memiliki gramasi antara 140 &ndash; 120 gr/m2. Bahan Cotton 30s ini paling banyak diminati terutama di kalangan anak muda, sering dipakai di setiap konveksi, distro dll karena bahannya tipis, tidak panas, dan tidak menyusut. Untuk bahan Cotton 30s ini lebih mudah ditemukan karena setiap konveksi pasti menawarkan pembuatan kaosnya menggunakan bahan Cotton 30s.</p>', 'gambar10.jpg', 120000, 12, 'on'),
+(29, 7, 'Mens Shirt 5', '<p>Bahan kaos Cotton 30s ini memiliki gramasi antara 140 &ndash; 120 gr/m2. Bahan Cotton 30s ini paling banyak diminati terutama di kalangan anak muda, sering dipakai di setiap konveksi, distro dll karena bahannya tipis, tidak panas, dan tidak menyusut. Untuk bahan Cotton 30s ini lebih mudah ditemukan karena setiap konveksi pasti menawarkan pembuatan kaosnya menggunakan bahan Cotton 30s.</p>', 'gambar11.jpg', 120000, 13, 'on'),
+(30, 8, 'Mens Jacket 3', '<p>Bahan kaos Cotton 30s ini memiliki gramasi antara 140 &amp;ndash; 120 gr/m2. Bahan Cotton 30s ini paling banyak diminati terutama di kalangan anak muda, sering dipakai di setiap konveksi, distro dll karena bahannya tipis, tidak panas, dan tidak menyusut. Untuk bahan Cotton 30s ini lebih mudah ditemukan karena setiap konveksi pasti menawarkan pembuatan kaosnya menggunakan bahan Cotton 30s.</p>', 'gambar3.jpg', 150000, 15, 'on'),
+(31, 8, 'Mens Jacket 4', '<p>Bahan kaos Cotton 30s ini memiliki gramasi antara 140 &amp;ndash; 120 gr/m2. Bahan Cotton 30s ini paling banyak diminati terutama di kalangan anak muda, sering dipakai di setiap konveksi, distro dll karena bahannya tipis, tidak panas, dan tidak menyusut. Untuk bahan Cotton 30s ini lebih mudah ditemukan karena setiap konveksi pasti menawarkan pembuatan kaosnya menggunakan bahan Cotton 30s.</p>', 'gambar4.jpg', 150000, 13, 'on'),
+(32, 8, 'Mens Jacket 5', '<p>Bahan kaos Cotton 30s ini memiliki gramasi antara 140 &amp;ndash; 120 gr/m2. Bahan Cotton 30s ini paling banyak diminati terutama di kalangan anak muda, sering dipakai di setiap konveksi, distro dll karena bahannya tipis, tidak panas, dan tidak menyusut. Untuk bahan Cotton 30s ini lebih mudah ditemukan karena setiap konveksi pasti menawarkan pembuatan kaosnya menggunakan bahan Cotton 30s.</p>', 'gambar5.jpg', 150000, 16, 'on');
+
 -- --------------------------------------------------------
 
 --
@@ -62,6 +86,14 @@ CREATE TABLE `kategori` (
   `kategori` varchar(150) NOT NULL,
   `status` enum('on','off') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kategori`
+--
+
+INSERT INTO `kategori` (`kategori_id`, `kategori`, `status`) VALUES
+(7, 'T-shirt', 'on'),
+(8, 'Jaket', 'on');
 
 -- --------------------------------------------------------
 
@@ -79,6 +111,15 @@ CREATE TABLE `konfirmasi_pembayaran` (
   `status` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `konfirmasi_pembayaran`
+--
+
+INSERT INTO `konfirmasi_pembayaran` (`konfirmasi_id`, `pesanan_id`, `nomor_rekening`, `nama_account`, `total_pembayaran`, `tanggal_transfer`, `status`) VALUES
+(1, 2, '', '', 0, '2019-02-09', 0),
+(2, 1, '', '', 0, '2019-02-09', 0),
+(3, 3, '', '', 0, '2019-12-02', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -91,6 +132,15 @@ CREATE TABLE `kota` (
   `tarif` int(10) NOT NULL,
   `status` enum('on','off') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kota`
+--
+
+INSERT INTO `kota` (`kota_id`, `kota`, `tarif`, `status`) VALUES
+(1, 'Bandung', 11000, 'on'),
+(2, 'Solo', 27000, 'on'),
+(3, 'Semarang', 27000, 'on');
 
 -- --------------------------------------------------------
 
@@ -109,6 +159,15 @@ CREATE TABLE `pesanan` (
   `status` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `pesanan`
+--
+
+INSERT INTO `pesanan` (`pesanan_id`, `kota_id`, `user_id`, `nama_penerima`, `nomor_telepon`, `alamat`, `tanggal_pemesanan`, `status`) VALUES
+(1, 1, 3, 'ven', '111', 'je', '2019-12-01 19:49:56', 1),
+(2, 1, 3, 'ven', '111', 'sada', '2019-12-01 19:50:32', 1),
+(3, 1, 5, 'Wahyu Aji Tirta Gumelar', '081812345678', 'Perumahan PBB No.C143', '2019-12-02 01:17:35', 2);
+
 -- --------------------------------------------------------
 
 --
@@ -121,6 +180,17 @@ CREATE TABLE `pesanan_detail` (
   `quantity` tinyint(2) NOT NULL,
   `harga` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pesanan_detail`
+--
+
+INSERT INTO `pesanan_detail` (`pesanan_id`, `barang_id`, `quantity`, `harga`) VALUES
+(1, 30, 2, 150000),
+(1, 28, 1, 120000),
+(2, 27, 4, 120000),
+(3, 20, 3, 120000),
+(3, 32, 2, 150000);
 
 -- --------------------------------------------------------
 
@@ -138,6 +208,17 @@ CREATE TABLE `user` (
   `password` varchar(300) NOT NULL,
   `status` enum('on','off') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`user_id`, `level`, `nama`, `email`, `alamat`, `phone`, `password`, `status`) VALUES
+(1, 'customer', 'vento', 'a@a.com', 'aaa', '080', '0cc175b9c0f1b6a831c399e269772661', 'on'),
+(2, 'superadmin', 'bmev', 'aa@aa.com', 'jhfse', '98', '4124bc0a9335c27f086f24ba207a4912', 'on'),
+(3, 'customer', 'Seno', 'seno@gmail.com', 'bandung', '08123456789', 'fa472db1114a7e002c4edcd25ab9bc27', 'on'),
+(4, 'superadmin', 'admin', 'admin@notonlycode.com', 'Baturetno', '081809929885', '21232f297a57a5a743894a0e4a801fc3', 'on'),
+(5, 'customer', 'Wahyu Aji Tirta Gumelar', 'tirta@gmail.com', 'Kalimantan', '081234456778', '0032df3d63d43dffea93a0d0fc1744cc', 'on');
 
 --
 -- Indexes for dumped tables
@@ -204,37 +285,37 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `banner`
 --
 ALTER TABLE `banner`
-  MODIFY `banner_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `banner_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `barang_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `barang_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `kategori_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `kategori_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `konfirmasi_pembayaran`
 --
 ALTER TABLE `konfirmasi_pembayaran`
-  MODIFY `konfirmasi_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `konfirmasi_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `kota`
 --
 ALTER TABLE `kota`
-  MODIFY `kota_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `kota_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `pesanan`
 --
 ALTER TABLE `pesanan`
-  MODIFY `pesanan_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `pesanan_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- Constraints for dumped tables
 --
